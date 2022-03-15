@@ -1,0 +1,26 @@
+.main-header{
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.Logo {
+    height: 100px;
+    width: 200px;
+    display: flex;
+}
+
+.sub-header{
+    height: 80px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: #12af9a;
+}
+
+.nav-sub-header{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}

@@ -1,0 +1,85 @@
+.Body{
+    width: 100%;
+    /* height: 500px; */
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.title-body {
+  margin-left: 10px;
+}
+
+.contendor12 {
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+}
+
+.tema1{
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    width: 410px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    border-radius: 3px;
+}
+
+.titulo-tema{
+background-color: #12af9a;
+color: grey;
+width: 100%;
+padding: 5px;
+min-height: 45px;
+}
+
+.titulo-tema h5{
+    font-size: 25px;
+    color: white;
+}
+
+
+.img-tema{
+    width: 100%;
+    padding: 10px;
+    min-height: 300px;
+    width: 100%;
+} 
+
+.desc-tema {
+    padding: 20px;
+    width: 100%;
+    min-height: 55px;
+}
+.desc-tema p {
+    text-align: center;
+    min-height: 55px;
+    padding: 5px;
+}
+
+.categorias{
+    width: 100%;
+    
+}
+
+.genres {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(245, 246, 246);
+    border-radius: 1px;
+}
+
+
+
+.titulo2 {
+    margin-top: 50px;
+    text-align: center;
+}
