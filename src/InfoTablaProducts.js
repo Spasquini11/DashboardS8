@@ -2,13 +2,13 @@ import {useState, useEffect} from 'react';
 
 function InfoTablaProducts () {
 
-    const [informacion, setInformacion] = useState([]);
+    const [producto, setProducto] = useState([]);
 
     useEffect( () => {
         fetch('https://rickandmortyapi.com/api/character')
         .then(rtaDB => rtaDB.json())
         .then(data => {
-            setInformacion(data.results)
+            setProducto(data.results)
         })
         .catch(error => console.error(error))
     }, [])
@@ -17,18 +17,18 @@ function InfoTablaProducts () {
     return (
     <>
         {
-            informacion.filter((item, idx) => idx < 10).map((info, i) => {
+            producto.filter((item, idx) => idx < 10).map((producto, i) => {
              return(
                  <thead className='columnas-info' key={i}>
                 <tr>
-                    <th>{info.id}</th>
-                    <th>{info.name}</th>
-                    <th>{info.status}</th>
-                    <th>{info.species}</th>
-                    <th>{info.type}</th>
-                    <th>{info.gender}</th>
-                    <th>{info.id}</th>
-                    <th>{info.id}</th>
+                    <th>{producto.id}</th>
+                    <th>{producto.name}</th>
+                    <th>{producto.status}</th>
+                    <th>{producto.species}</th>
+                    <th>{producto.type}</th>
+                    <th>{producto.gender}</th>
+                    <th>{producto.id}</th>
+                    <th>{producto.id}</th>
                 </tr>
             </thead>
              )
