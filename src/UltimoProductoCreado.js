@@ -5,19 +5,15 @@ function UltimoProductoCreado () {
     const [producto, setProducto] = useState([]);
 
     useEffect( () => {
-        fetch('https://rickandmortyapi.com/api/character')
+        fetch('http://localhost:3031/api/products')
         .then(rtaDB => rtaDB.json())
         .then(data => {
-            setProducto(data.results)
+            setProducto(data.data)
         })
         .catch(error => console.error(error))
     }, [])
 
-        let ultimo = producto[producto.length - 1] 
-   useEffect( () => {
-        console.log('se actualizo')
-    }, [ultimo])
-    
+    /* let ultimo = producto[producto.length - 1] */ 
     
 
     return (
@@ -29,10 +25,10 @@ function UltimoProductoCreado () {
 					<h5>Ultimo USUARIO creado</h5>
 				</div>
 				<div className='img-tema'>
-					<img src={producto.image}/>
+					<img src={producto[0].image1}/>
 				</div>
                 <div className='desc-tema'>
-                    <p>{producto.name}</p>
+                    <p>{producto[0].name}</p>
 				</div>    
             </div>
         }                   	

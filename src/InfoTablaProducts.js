@@ -5,10 +5,10 @@ function InfoTablaProducts () {
     const [producto, setProducto] = useState([]);
 
     useEffect( () => {
-        fetch('https://rickandmortyapi.com/api/character')
+        fetch('http://localhost:3031/api/products')
         .then(rtaDB => rtaDB.json())
-        .then(data => {
-            setProducto(data.results)
+        .then(response => {
+            setProducto(response.data)
         })
         .catch(error => console.error(error))
     }, [])
@@ -17,18 +17,21 @@ function InfoTablaProducts () {
     return (
     <>
         {
-            producto.filter((item, idx) => idx < 10).map((producto, i) => {
+            producto.map((producto, i) => {
+
              return(
+                 
                  <thead className='columnas-info' key={i}>
+                     
                 <tr>
+
                     <th>{producto.id}</th>
                     <th>{producto.name}</th>
-                    <th>{producto.status}</th>
-                    <th>{producto.species}</th>
-                    <th>{producto.type}</th>
-                    <th>{producto.gender}</th>
-                    <th>{producto.id}</th>
-                    <th>{producto.id}</th>
+                    <th>{producto.description}</th>
+                    <th>{producto.discount}</th>
+                    <th>{producto.color}</th>
+                    <th>{producto.size}</th>
+    
                 </tr>
             </thead>
              )
@@ -41,3 +44,6 @@ function InfoTablaProducts () {
 }
 
 export default InfoTablaProducts;
+
+
+/* 2634845845 */
