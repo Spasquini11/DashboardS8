@@ -16,12 +16,10 @@ function TablaProducts () {
          <tr>
             <th>ID</th>
             <th>NOMBRE</th>
-            <th>GENERO</th>
-            <th>TALLE</th>
+            <th>DESCRIPCION</th>
+            <th>DESCUENTO</th>
             <th>COLOR</th>
-            <th>CATEGORIA</th>
-            <th>GENERO</th>
-            <th>PRECIO</th>
+            <th>TALLE</th>
 
          </tr>  
         </thead>

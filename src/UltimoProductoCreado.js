@@ -25,10 +25,10 @@ function UltimoProductoCreado () {
 					<h5>Ultimo USUARIO creado</h5>
 				</div>
 				<div className='img-tema'>
-					<img src={producto[0].image1}/>
+					<img src={producto.image1}/>
 				</div>
                 <div className='desc-tema'>
-                    <p>{producto[0].name}</p>
+                    <p>{producto.name}</p>
 				</div>    
             </div>
         }                   	
