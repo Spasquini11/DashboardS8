@@ -7,10 +7,11 @@ function PanelCategoria  () {
     
 
     useEffect( () => {
-        fetch('https://rickandmortyapi.com/api/character')
+        fetch('http://localhost:3031/api/products')
         .then(rtaDB => rtaDB.json())
-        .then(data => {
-            setCategorias(data.results)
+        .then(info => {
+            setCategorias(info.data)
+            
         })
         .catch(error => console.error(error))
     }, [])
@@ -21,18 +22,23 @@ function PanelCategoria  () {
     <div className='titulo-tema'>
 		<h5>Panel de categorias</h5>
 	</div>
+
+     <div className='categorias'>
+         
         {
             categorias.filter((item, idx) => idx < 7).map((categoria, i) => {
-                return (
-                    <div className='categorias'>
-                        <div className='genres' >
-                            <p key={i}>{categoria.gender}</p>
-                        </div>
+                
+                    return (
+                
+                    <div className='genres' >
+                        <p key={i}>{categoria.id_category}</p>
                     </div>
-                    
-                )
+                     
+                    ) 
             })
-        }                   	
+            
+        } 
+        </div>         	
     </>    
 
     )
@@ -41,12 +47,3 @@ function PanelCategoria  () {
 export default PanelCategoria;
 
 
-/* {
-    categorias.map((categoria, i) => {
-        return (
-            <div className='genres' >
-             <p key={i}>{categoria.name}</p>
-             </div>
-        )
-    })
-} */

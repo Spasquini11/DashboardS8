@@ -19,7 +19,8 @@ function InfoTablaProducts () {
         {
             producto.map((producto, i) => {
              return(
-                 <thead className='columnas-info' key={i}>
+                <>
+            <thead className='columnas-info' key={i}>
                 <tr>
                     <th>{producto.id}</th>
                     <th>{producto.name}</th>
@@ -29,6 +30,8 @@ function InfoTablaProducts () {
                     <th>{producto.size}</th>
                 </tr>
             </thead>
+                 </>
+                 
              )
             
 

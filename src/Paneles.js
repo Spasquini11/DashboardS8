@@ -18,14 +18,14 @@ function Paneles () {
         setTotalProduct(response.total)
         setTotalCategory(response.countByCategory)
         setTotalUser(response.data)
-
     })
+    
     .catch(error => console.error(error))
   }, []);
 
 
   return(
-    
+    <>
     <div className="main-container">
 
       <div className="heading">
@@ -51,6 +51,8 @@ function Paneles () {
       </div>
 
     </div>
+    </>
+    
   )
 }
 

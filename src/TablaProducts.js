@@ -5,7 +5,8 @@ import InfoTablaProducts from './InfoTablaProducts';
 function TablaProducts () {
 
     return(
-    <div className='panel'>
+ <>
+        <div className='panel'>
 
         <div>
            <h2 className='titulo2'> Listado de Productos </h2>
@@ -29,6 +30,8 @@ function TablaProducts () {
             
      </div>
     </div>
+</>
+    
     
     )
 }
